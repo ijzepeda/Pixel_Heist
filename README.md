@@ -4,3 +4,7 @@ based on some tutorials, and using
 craftpix assets
 
 *AML1214 2023_W*
+
+
+
+`pip install pygame`
