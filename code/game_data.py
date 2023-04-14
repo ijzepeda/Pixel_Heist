@@ -22,6 +22,7 @@ level_0 = {
 level_1 = {
 		'terrain': '../levels/0/level_0_terrain.csv',
 		'bg':'../levels/0/level_0_bg.csv',
+        'bg1':'../levels/0/level_0_bg.csv', #tiene las cosas en su lugar, pero la imagen esta mal
         
 		'coins':'../levels/0/level_0_coins.csv',
 		'fg objects':'../levels/0/level_0_fg_objects.csv',

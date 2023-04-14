@@ -4,3 +4,5 @@ graphics/.DS_Store
 levels/.DS_Store
 levels/2/.DS_Store
 levels_creation/.DS_Store
+code/__pycache__
+code/__pycache__/*

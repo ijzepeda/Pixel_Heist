@@ -8,3 +8,11 @@ craftpix assets
 
 
 `pip install pygame`
+
+
+<img title="a title" alt="Alt text" src="./levels_creation/screenshots/1.png">
+<img title="a title" alt="Alt text" src="./levels_creation/screenshots/3.png">
+<img title="a title" alt="Alt text" src="./levels_creation/screenshots/4.png">
+<img title="a title" alt="Alt text" src="./levels_creation/screenshots/5.png">
+<img title="a title" alt="Alt text" src="./levels_creation/screenshots/6.png">
+<img title="a title" alt="Alt text" src="./levels_creation/screenshots/2.png">
