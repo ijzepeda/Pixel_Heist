@@ -42,7 +42,6 @@ class Player(pygame.sprite.Sprite):
 		self.hurt_time = 0
 
 	def import_character_assets(self):
-		# create docstrings
 		"""Import the character assets"""
 		character_path = '../graphics/character/'
 		self.animations = {'idle':[],'run':[],'jump':[],'fall':[]}

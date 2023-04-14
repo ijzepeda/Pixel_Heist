@@ -3,12 +3,14 @@
 
 level_0 = {
 		'terrain': '../levels/0/level_0_terrain.csv',
+		# 'bg':'../levels/0/level_0_bg.csv',
+		'bg':'../levels/0/level_0_bg.csv', #tiene las cosas en su lugar, pero la imagen esta mal
+		'bg1':'../levels/0/level_0_bg.csv', #tiene las cosas en su lugar, pero la imagen esta mal
+        
 		'coins':'../levels/0/level_0_coins.csv',
 		'fg objects':'../levels/0/level_0_fg_objects.csv',
 		'bg objects':'../levels/0/level_0_bgObjects.csv',
-		'houses':'../levels/0/level_0_bg_house.csv',
-		'bg':'../levels/0/level_0_bg.csv',
-		'enemies':'../levels/0/level_0_enemy.csv',
+ 		'enemies':'../levels/0/level_0_enemy.csv',
 		'constraints':'../levels/0/level_0_constraints.csv',
 		'player': '../levels/0/level_0_player.csv',
 		'node_pos': (150,260),
@@ -19,12 +21,12 @@ level_0 = {
 
 level_1 = {
 		'terrain': '../levels/0/level_0_terrain.csv',
+		'bg':'../levels/0/level_0_bg.csv',
+        
 		'coins':'../levels/0/level_0_coins.csv',
 		'fg objects':'../levels/0/level_0_fg_objects.csv',
 		'bg objects':'../levels/0/level_0_bgObjects.csv',
-		'houses':'../levels/0/level_0_bg_house.csv',
-		'bg':'../levels/0/level_0_bg.csv',
-		'enemies':'../levels/0/level_0_enemy.csv',
+ 		'enemies':'../levels/0/level_0_enemy.csv',
 		'constraints':'../levels/0/level_0_constraints.csv',
 		'player': '../levels/0/level_0_player.csv',
 		'node_pos': (360,500),
@@ -34,7 +36,7 @@ level_1 = {
 		'node_graphics': '../graphics/overworld/1'}
      
 level_2 = {
-		'bg':'../levels/2/level_2_fg_objects.csv',
+		'bg':'../levels/2/level_2_terrain.csv',
 		'terrain': '../levels/2/level_2_terrain.csv',
 		'coins':'../levels/2/level_2_coins.csv',
 		'fg objects':'../levels/2/level_2_fg_objects.csv',
@@ -48,10 +50,11 @@ level_2 = {
         'night':False,
 		'unlock': 3}
 level_3 = {
-		'bg':'../levels/3/level_3_fg_objects.csv',
+		'bg':'../levels/3/level_3_bg_terrain.csv',
 		'terrain': '../levels/3/level_3_terrain.csv',
 		'coins':'../levels/3/level_3_coins.csv',
 		'fg objects':'../levels/3/level_3_fg_objects.csv',
+		'bg terain':'../levels/3/level_3_bg_terrain.csv',
 		'bg objects':'../levels/3/level_3_bg_objects.csv',
 		'enemies':'../levels/3/level_3_enemies.csv',
 		'constraints':'../levels/3/level_3_constraints.csv',

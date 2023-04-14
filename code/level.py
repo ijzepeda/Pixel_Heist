@@ -49,18 +49,21 @@ class Level:
 		# background
 		bg_layout = import_csv_layout(level_data['bg'])
 		self.bg_sprites = self.create_tile_group(bg_layout,'bg')
+		if ('bg1' in level_data.keys()):
+			bg_layout = import_csv_layout(level_data['bg1'])
+			self.bg_sprites = self.create_tile_group(bg_layout,'bg1')
 
 		# coins 
 		coin_layout = import_csv_layout(level_data['coins'])
 		self.coin_sprites = self.create_tile_group(coin_layout,'coins')
 
 		# foreground objects 
-		fg_palm_layout = import_csv_layout(level_data['fg objects'])
-		self.fg_palm_sprites = self.create_tile_group(fg_palm_layout,'fg objects')
+		fg_obs_layout = import_csv_layout(level_data['fg objects'])
+		self.fg_obs_sprites = self.create_tile_group(fg_obs_layout,'fg objects')
 
 		# background objects 
-		# bg_palm_layout = import_csv_layout(level_data['bg objects'])
-		# self.bg_palm_sprites = self.create_tile_group(bg_palm_layout,'bg objects')
+		bg_obs_layout = import_csv_layout(level_data['bg objects'])
+		self.bg_obs_sprites = self.create_tile_group(bg_obs_layout,'bg objects')
 
 		# enemy 
 		enemy_layout = import_csv_layout(level_data['enemies'])
@@ -91,7 +94,14 @@ class Level:
 						tile_surface = terrain_tile_list[int(val)]
 						sprite = StaticTile(tile_size,x,y,tile_surface) 
  
-					if type == 'bg':
+					if type == 'bg': # This one is setting tiles to terrain correctly
+						bg_tile_list = import_cut_graphics('../graphics/terrain/terrain_1.png')
+						# bg_tile_list = import_cut_graphics('../graphics/terrain/terrain_1.png')
+						tile_surface = bg_tile_list[int(val)]
+						sprite = StaticTile(tile_size,x,y,tile_surface)
+
+					if type == 'bg1': # This one is for level1,2 tiles are incorrect
+						# bg_tile_list = import_cut_graphics('../graphics/terrain/terrain_1.png')
 						bg_tile_list = import_cut_graphics('../graphics/items/items.png')
 						tile_surface = bg_tile_list[int(val)]
 						sprite = StaticTile(tile_size,x,y,tile_surface)
@@ -99,23 +109,17 @@ class Level:
 					if type == 'fg objects':
 						fgobs_tile_list_extra = import_cut_graphics('../graphics/items/items_extra.png')
 						tile_surface = fgobs_tile_list_extra[int(val)]
-						sprite = StaticTile(tile_size,x,y,tile_surface)
-
-					if type == 'fg objects':
-						fgobs_tile_list = import_cut_graphics('../graphics/items/items.png')
-						tile_surface = fgobs_tile_list[int(val)]
-						sprite = StaticTile(tile_size,x,y,tile_surface)
+						sprite = StaticTile(tile_size,x,y,tile_surface) 
+						
 					if type == 'bg objects':
-						bgobs_tile_list = import_cut_graphics('../graphics/terrain/terrain_1.png')
+						bgobs_tile_list = import_cut_graphics('../graphics/items/items.png') #bgobjects.csv
 						tile_surface = bgobs_tile_list[int(val)]
 						sprite = StaticTile(tile_size,x,y,tile_surface)
 						
 
 					if type == 'coins':
 						if val == '0': sprite = Coin(tile_size,x,y,'../graphics/coins/gold',5)
-						if val == '1': sprite = Coin(tile_size,x,y,'../graphics/coins/silver',1)
-
-
+						if val == '1': sprite = Coin(tile_size,x,y,'../graphics/coins/silver',1) 
 
 					if type == 'enemies':
 						sprite = Enemy(tile_size,x,y)
@@ -124,19 +128,6 @@ class Level:
 						sprite = Tile(tile_size,x,y)
 
 
-					# if type == 'grass':
-					# 	grass_tile_list = import_cut_graphics('../graphics/decoration/grass/grass.png')
-					# 	tile_surface = grass_tile_list[int(val)]
-					# 	sprite = StaticTile(tile_size,x,y,tile_surface)
-					
-					# if type == 'crates':
-					# 	sprite = Crate(tile_size,x,y)
-					# if type == 'fg objects':
-					# 	if val == '0': sprite = Palm(tile_size,x,y,'../graphics/terrain/palm_small',38)
-					# 	if val == '1': sprite = Palm(tile_size,x,y,'../graphics/terrain/palm_large',64)
-
-					# if type == 'bg objects':
-					# 	sprite = Palm(tile_size,x,y,'../graphics/terrain/palm_bg',64)
 
 					if (sprite != None):
 						sprite_group.add(sprite)
@@ -290,6 +281,15 @@ class Level:
 		self.bg_sprites.update(self.world_shift)
 		self.bg_sprites.draw(self.display_surface)
 		
+		# bg o
+		self.bg_obs_sprites.update(self.world_shift)
+		self.bg_obs_sprites.draw(self.display_surface)
+		 
+		# fg o
+		self.fg_obs_sprites.update(self.world_shift)
+		self.fg_obs_sprites.draw(self.display_surface)
+		 
+
 		# enemy 
 		self.enemy_sprites.update(self.world_shift)
 		self.constraint_sprites.update(self.world_shift)
@@ -298,21 +298,11 @@ class Level:
 		self.explosion_sprites.update(self.world_shift)
 		self.explosion_sprites.draw(self.display_surface)
 
-		# crate 
-		# self.crate_sprites.update(self.world_shift)
-		# self.crate_sprites.draw(self.display_surface)
-
-		# grass
-		# self.grass_sprites.update(self.world_shift)
-		# self.grass_sprites.draw(self.display_surface)
 
 		# coins 
 		self.coin_sprites.update(self.world_shift)
 		self.coin_sprites.draw(self.display_surface)
 
-		# foreground objects
-		# self.fg_palm_sprites.update(self.world_shift)
-		# self.fg_palm_sprites.draw(self.display_surface)
 
 		# dust particles 
 		self.dust_sprite.update(self.world_shift)
