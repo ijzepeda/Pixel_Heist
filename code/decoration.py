@@ -6,7 +6,8 @@ from random import choice, randint
 
 class Sky:
 	def __init__(self,horizon,style = 'level', night=False):
-		theme=""
+		global theme 
+		theme = ""
 		if(night):
 			theme="_night"
 		self.top = pygame.image.load(f'../graphics/decoration/sky{theme}/sky_top.png').convert()
@@ -96,7 +97,7 @@ class Clouds:
 
 class City:
 	def __init__(self,horizon,level_width,city_number):
-		city_surf_list = import_folder('../graphics/decoration/city')
+		city_surf_list = import_folder(f'../graphics/decoration/city{theme}')
 		min_x = -screen_width
 		max_x = level_width + screen_width
 		min_y = 0
@@ -106,7 +107,7 @@ class City:
 		for city in range(city_number):
 			city = choice(city_surf_list)
 			x = randint(min_x,max_x)
-			y = screen_height/2#randint(min_y,max_y)
+			y = screen_height/2 
 			sprite = StaticTile(0,x,y,city)
 			self.city_sprites.add(sprite)
 

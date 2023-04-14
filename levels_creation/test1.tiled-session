@@ -1,0 +1,123 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "/Users/ivan/LAMBTON/CODE4ALL/AML_1214/level_0.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "exportAsImage.drawObjectLabels": false,
+    "exportAsImage.drawTileGrid": false,
+    "exportAsImage.useCurrentScale": false,
+    "fileStates": {
+        "#items": {
+            "dynamicWrapping": true
+        },
+        "/Users/ivan/LAMBTON/CODE4ALL/AML_1214/Final_Project/OurGame_alpha/Tiles_sprites/items.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "/Users/ivan/LAMBTON/CODE4ALL/AML_1214/Final_Project/OurGame_alpha/Tiles_sprites/terrain.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "/Users/ivan/LAMBTON/CODE4ALL/AML_1214/level_0.tmx": {
+            "scale": 0.55,
+            "selectedLayer": 7,
+            "viewCenter": {
+                "x": 948.1818181818182,
+                "y": 307.2727272727273
+            }
+        },
+        "items.tmx": {
+            "scale": 0.9054687499999999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 316.4106988783434,
+                "y": 160.1380500431407
+            }
+        },
+        "items.tmx#items": {
+            "scaleInDock": 1
+        },
+        "items.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 0.44,
+            "scaleInEditor": 0.2663
+        },
+        "items_fixed.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "items_test1.tmx": {
+            "scale": 1.55,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 150.6451612903226,
+                "y": 184.51612903225808
+            }
+        },
+        "items_test2.tmx": {
+            "scale": 1.06,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 211.3207547169811,
+                "y": 173.5849056603774
+            }
+        },
+        "map_guide.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 0.12,
+            "scaleInEditor": 1
+        },
+        "terrain_1.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "terrains.tmx": {
+            "scale": 1.438359375,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 144.60920102112863,
+                "y": 320.5040464939438
+            }
+        },
+        "terrains.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.exportedFilePath": "/Users/ivan/LAMBTON/CODE4ALL/AML_1214/Final_Project/Tiles_sprites/0",
+    "last.externalTilesetPath": "/Users/ivan/LAMBTON/CODE4ALL/AML_1214/Final_Project/test_level",
+    "last.imagePath": "/Users/ivan/LAMBTON/CODE4ALL/AML_1214/Final_Project/OurGame_beta/graphics/items",
+    "map.fixedSize": true,
+    "map.height": 20,
+    "map.lastUsedExportFilter": "All Files (*)",
+    "map.lastUsedFormat": "tmx",
+    "map.width": 60,
+    "openFiles": [
+        "/Users/ivan/LAMBTON/CODE4ALL/AML_1214/level_0.tmx"
+    ],
+    "project": "test1.tiled-project",
+    "recentFiles": [
+        "items.tsx",
+        "items_fixed.tsx",
+        "/Users/ivan/LAMBTON/CODE4ALL/AML_1214/level_0.tmx",
+        "/Users/ivan/LAMBTON/CODE4ALL/AML_1214/Final_Project/OurGame_alpha/Tiles_sprites/items.tsx",
+        "map_guide.tsx",
+        "/Users/ivan/LAMBTON/CODE4ALL/AML_1214/Final_Project/OurGame_alpha/Tiles_sprites/terrain.tsx",
+        "items.tmx",
+        "items_test2.tmx",
+        "items_test1.tmx",
+        "terrains.tsx",
+        "terrains.tmx",
+        "terrain_1.tsx"
+    ],
+    "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.type": 0
+}

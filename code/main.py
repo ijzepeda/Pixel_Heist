@@ -6,7 +6,7 @@ Ivan Zepeda
 Nivedini
 Preet
 Suzanne
-??????
+Swetha
 
 The game has been made using pygame, 
 and sprites from craftpix.com
@@ -24,7 +24,7 @@ class Game:
 	def __init__(self): 
 		"""This class is used to create the game"""
 		# game attributes
-		self.max_level = 2
+		self.max_level = 4
 		self.max_health = 100
 		self.cur_health = 100
 		self.coins = 0

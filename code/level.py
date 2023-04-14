@@ -21,6 +21,11 @@ class Level:
 		level_data = levels[self.current_level]
 		self.new_max_level = level_data['unlock']
 
+		# Change screen height
+		new_height=level_data['vertical_tile_number'] * tile_size
+		new_screen=pygame.display.set_mode((screen_width, new_height))
+		self.display_surface =new_screen
+
 		# player 
 		player_layout = import_csv_layout(level_data['player'])
 		self.player = pygame.sprite.GroupSingle()
@@ -50,10 +55,10 @@ class Level:
 		self.coin_sprites = self.create_tile_group(coin_layout,'coins')
 
 		# foreground objects 
-		# fg_palm_layout = import_csv_layout(level_data['fg objects'])
-		# self.fg_palm_sprites = self.create_tile_group(fg_palm_layout,'fg objects')
+		fg_palm_layout = import_csv_layout(level_data['fg objects'])
+		self.fg_palm_sprites = self.create_tile_group(fg_palm_layout,'fg objects')
 
-		# # background objects 
+		# background objects 
 		# bg_palm_layout = import_csv_layout(level_data['bg objects'])
 		# self.bg_palm_sprites = self.create_tile_group(bg_palm_layout,'bg objects')
 
@@ -84,8 +89,41 @@ class Level:
 					if type == 'terrain':
 						terrain_tile_list = import_cut_graphics('../graphics/terrain/terrain_1.png')
 						tile_surface = terrain_tile_list[int(val)]
+						sprite = StaticTile(tile_size,x,y,tile_surface) 
+ 
+					if type == 'bg':
+						bg_tile_list = import_cut_graphics('../graphics/items/items.png')
+						tile_surface = bg_tile_list[int(val)]
 						sprite = StaticTile(tile_size,x,y,tile_surface)
 						
+					if type == 'fg objects':
+						fgobs_tile_list_extra = import_cut_graphics('../graphics/items/items_extra.png')
+						tile_surface = fgobs_tile_list_extra[int(val)]
+						sprite = StaticTile(tile_size,x,y,tile_surface)
+
+					if type == 'fg objects':
+						fgobs_tile_list = import_cut_graphics('../graphics/items/items.png')
+						tile_surface = fgobs_tile_list[int(val)]
+						sprite = StaticTile(tile_size,x,y,tile_surface)
+					if type == 'bg objects':
+						bgobs_tile_list = import_cut_graphics('../graphics/terrain/terrain_1.png')
+						tile_surface = bgobs_tile_list[int(val)]
+						sprite = StaticTile(tile_size,x,y,tile_surface)
+						
+
+					if type == 'coins':
+						if val == '0': sprite = Coin(tile_size,x,y,'../graphics/coins/gold',5)
+						if val == '1': sprite = Coin(tile_size,x,y,'../graphics/coins/silver',1)
+
+
+
+					if type == 'enemies':
+						sprite = Enemy(tile_size,x,y)
+
+					if type == 'constraint':
+						sprite = Tile(tile_size,x,y)
+
+
 					# if type == 'grass':
 					# 	grass_tile_list = import_cut_graphics('../graphics/decoration/grass/grass.png')
 					# 	tile_surface = grass_tile_list[int(val)]
@@ -93,28 +131,12 @@ class Level:
 					
 					# if type == 'crates':
 					# 	sprite = Crate(tile_size,x,y)
-
-					if type == 'coins':
-						if val == '0': sprite = Coin(tile_size,x,y,'../graphics/coins/gold',5)
-						if val == '1': sprite = Coin(tile_size,x,y,'../graphics/coins/silver',1)
-
 					# if type == 'fg objects':
 					# 	if val == '0': sprite = Palm(tile_size,x,y,'../graphics/terrain/palm_small',38)
 					# 	if val == '1': sprite = Palm(tile_size,x,y,'../graphics/terrain/palm_large',64)
 
 					# if type == 'bg objects':
 					# 	sprite = Palm(tile_size,x,y,'../graphics/terrain/palm_bg',64)
-
-					if type == 'bg':
-						terrain_tile_list = import_cut_graphics('../graphics/items/items.png')
-						tile_surface = terrain_tile_list[int(val)]
-						sprite = StaticTile(tile_size,x,y,tile_surface)
-
-					if type == 'enemies':
-						sprite = Enemy(tile_size,x,y)
-
-					if type == 'constraint':
-						sprite = Tile(tile_size,x,y)
 
 					if (sprite != None):
 						sprite_group.add(sprite)
@@ -126,12 +148,10 @@ class Level:
 			for col_index,val in enumerate(row):
 				x = col_index * tile_size
 				y = row_index * tile_size
-				if (val == '0' or val == '4' or val=='11'):
-					print("CREATING PLAYER PLAYABLE")
+				if (val == '0' or val == '4' or val=='11'): 
 					sprite = Player((x,y),self.display_surface,self.create_jump_particles,change_health)
 					self.player.add(sprite)
-				if val == '1' or val =='2':
-					print("CREATING PLAYER ICON")
+				if val == '1' or val =='2': 
 					hat_surface = pygame.image.load('../graphics/character/hat.png').convert_alpha()
 					sprite = StaticTile(tile_size,x,y,hat_surface)
 					self.goal.add(sprite)

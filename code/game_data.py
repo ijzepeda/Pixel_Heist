@@ -1,3 +1,6 @@
+# Make sure that only the first level is activated for 'unlock=1' so when the game reboots to 0's the vector wont get any error
+# It happens when the user dies, and tries to create a vector, because 2 levels have been unlocked, but, overworld only will display the first level/Node
+
 level_0 = {
 		'terrain': '../levels/0/level_0_terrain.csv',
 		'coins':'../levels/0/level_0_coins.csv',
@@ -5,14 +8,12 @@ level_0 = {
 		'bg objects':'../levels/0/level_0_bgObjects.csv',
 		'houses':'../levels/0/level_0_bg_house.csv',
 		'bg':'../levels/0/level_0_bg.csv',
-		'crates': '../levels/0/level_0_crates.csv',
 		'enemies':'../levels/0/level_0_enemy.csv',
 		'constraints':'../levels/0/level_0_constraints.csv',
 		'player': '../levels/0/level_0_player.csv',
-		# 'grass': '../levels/0/level0_grass.csv',
 		'node_pos': (150,260),
-		# 'node_pos': (110,400),
 		'unlock': 1,
+        'vertical_tile_number':20,
         'night':False,
 		'node_graphics': '../graphics/overworld/0'}
 
@@ -23,43 +24,42 @@ level_1 = {
 		'bg objects':'../levels/0/level_0_bgObjects.csv',
 		'houses':'../levels/0/level_0_bg_house.csv',
 		'bg':'../levels/0/level_0_bg.csv',
-		'crates': '../levels/0/level_0_crates.csv',
 		'enemies':'../levels/0/level_0_enemy.csv',
 		'constraints':'../levels/0/level_0_constraints.csv',
 		'player': '../levels/0/level_0_player.csv',
-		# 'grass': '../levels/0/level0_grass.csv',
 		'node_pos': (360,500),
-		# 'node_pos': (320,200),
-		'unlock': 1,
+		'unlock': 2,
         'night':True,
-        
+        'vertical_tile_number':20,
 		'node_graphics': '../graphics/overworld/1'}
      
 level_2 = {
+		'bg':'../levels/2/level_2_fg_objects.csv',
 		'terrain': '../levels/2/level_2_terrain.csv',
 		'coins':'../levels/2/level_2_coins.csv',
 		'fg objects':'../levels/2/level_2_fg_objects.csv',
 		'bg objects':'../levels/2/level_2_bg_objects.csv',
-		'crates': '../levels/2/level_2_crates.csv',
 		'enemies':'../levels/2/level_2_enemies.csv',
 		'constraints':'../levels/2/level_2_constraints.csv',
 		'player': '../levels/2/level_2_player.csv',
-		'grass': '../levels/2/level_2_grass.csv',
 		'node_pos': (650,400),
 		'node_graphics': '../graphics/overworld/2',
+        'vertical_tile_number':25,
+        'night':False,
 		'unlock': 3}
 level_3 = {
-		'terrain': '../levels/2/level_2_terrain.csv',
-		'coins':'../levels/2/level_2_coins.csv',
-		'fg objects':'../levels/2/level_2_fg_objects.csv',
-		'bg objects':'../levels/2/level_2_bg_objects.csv',
-		'crates': '../levels/2/level_2_crates.csv',
-		'enemies':'../levels/2/level_2_enemies.csv',
-		'constraints':'../levels/2/level_2_constraints.csv',
-		'player': '../levels/2/level_2_player.csv',
-		'grass': '../levels/2/level_2_grass.csv',
+		'bg':'../levels/3/level_3_fg_objects.csv',
+		'terrain': '../levels/3/level_3_terrain.csv',
+		'coins':'../levels/3/level_3_coins.csv',
+		'fg objects':'../levels/3/level_3_fg_objects.csv',
+		'bg objects':'../levels/3/level_3_bg_objects.csv',
+		'enemies':'../levels/3/level_3_enemies.csv',
+		'constraints':'../levels/3/level_3_constraints.csv',
+		'player': '../levels/3/level_3_player.csv',
 		'node_pos': (820,200),
 		'node_graphics': '../graphics/overworld/3',
+        'vertical_tile_number':25,
+        'night':False,
 		'unlock': 4}
 
 
@@ -67,6 +67,6 @@ level_3 = {
 levels = {
 	0: level_0,
 	1: level_1, 
-	# 2: level_2,
-	# 3: level_3  
+	2: level_2,
+	3: level_3  
     }

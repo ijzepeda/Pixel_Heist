@@ -1,0 +1,140 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "level_ivan2.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
+        "items.tmx": {
+            "scale": 1.0133333333333332,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 480.09868421052647,
+                "y": 160.8552631578948
+            }
+        },
+        "items.tmx#items": {
+            "scaleInDock": 1
+        },
+        "items_expanded.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 0.6
+        },
+        "items_extra.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 206,
+                "y": 145.99999999999997
+            }
+        },
+        "items_extra.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "items_extra_1.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "items_fixed.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "level_Nive.tmx": {
+            "scale": 0.5,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 687,
+                "y": 456
+            }
+        },
+        "level_data/level_0.tmx": {
+            "scale": 0.13186197916666664,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1922.464698331194,
+                "y": 356.4332971264937
+            }
+        },
+        "level_ivan.tmx": {
+            "scale": 0.5164,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 446.3594113090628,
+                "y": 886.9093725793958
+            }
+        },
+        "level_ivan2.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 1398.6666666666665,
+                "y": 263.99999999999994
+            }
+        },
+        "terrain_1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "tilesets/coin_tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "tilesets/crates.tsx": {
+            "scaleInDock": 1
+        },
+        "tilesets/enemy_tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "tilesets/grass_tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "tilesets/palms.tsx": {
+            "scaleInDock": 1
+        },
+        "tilesets/player_tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "tilesets/terrain.tsx": {
+            "scaleInDock": 1
+        },
+        "tilesets/terrain_tiles.tsx": {
+            "scaleInDock": 1
+        }
+    },
+    "last.exportedFilePath": "/Users/ivan/LAMBTON/CODE4ALL/AML_1214/Pixel_Heist/levels/3",
+    "last.externalTilesetPath": "/Users/ivan/LAMBTON/CODE4ALL/AML_1214/Pixel_Heist/levels_creation",
+    "last.imagePath": "/Users/ivan/LAMBTON/CODE4ALL/AML_1214/Final_Project1/other/OurGame_beta/graphics/items",
+    "map.height": 50,
+    "map.lastUsedExportFilter": "All Files (*)",
+    "map.lastUsedFormat": "tmx",
+    "map.width": 12,
+    "openFiles": [
+        "level_ivan2.tmx"
+    ],
+    "project": "pixel_heist.tiled-project",
+    "recentFiles": [
+        "items_expanded.tsx",
+        "level_ivan2.tmx",
+        "items_extra_1.tsx",
+        "items_extra.tmx",
+        "items_extra.tsx",
+        "items.tmx",
+        "level_ivan.tmx",
+        "level_Nive.tmx",
+        "terrain_1.tsx",
+        "items_fixed.tsx",
+        "level_data/level_0.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.type": 1
+}
